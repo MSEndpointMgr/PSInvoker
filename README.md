@@ -13,7 +13,7 @@ PSInvoker supports two command line arguments.
 - 
 
 ## Examples
-```powershell
+```cmd
 > PSInvoker.exe <PATH_TO_PS1>
 > PSInvoker.exe <PATH_TO_PS1> -e RemoteSigned
 > PSInvoker.exe <PATH_TO_PS1> -ExecutionPolicy RemoteSigned
