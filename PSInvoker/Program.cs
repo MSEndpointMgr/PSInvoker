@@ -10,7 +10,7 @@ namespace Invoker
 {
     internal class Program
     {
-        private readonly static string processName = ConfigurationManager.AppSettings["ProcessName"];
+        private readonly static string processName = "powershell.exe";
 
         static void Main(string[] args)
         {
@@ -62,6 +62,12 @@ namespace Invoker
                 process.Start();
 
                 Logger.WriteLogFile("Invoked process successfully");
+
+                if (commandLine.Wait == true)
+                {
+                    process.WaitForExit();
+                    Logger.WriteLogFile($"PowerShell process completed with exit code: {process.ExitCode}");
+                }
             }
             else
             {

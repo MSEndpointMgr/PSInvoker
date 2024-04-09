@@ -9,8 +9,7 @@ namespace PSInvoker
     {
         public static void WriteLogFile(string message)
         {
-            string logPathConfig = ConfigurationManager.AppSettings["LogPath"];
-            string logPath = Environment.ExpandEnvironmentVariables(logPathConfig);
+            string logPath = Environment.ExpandEnvironmentVariables("%TEMP%\\PSInvoker.log");
 
             using (StreamWriter writer = new StreamWriter(logPath, true))
             {

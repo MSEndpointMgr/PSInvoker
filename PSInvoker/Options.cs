@@ -9,5 +9,8 @@ namespace PSInvoker
 
         [Option('e', "ExecutionPolicy", Required = false, HelpText = "Input PowerShell process execution policy.")]
         public string ExecutionPolicy { get; set; }
+
+        [Option('w', "Wait", Required = false, HelpText = "Wait until the PowerShell process completes.")]
+        public bool Wait { get; set; }
     }
 }
