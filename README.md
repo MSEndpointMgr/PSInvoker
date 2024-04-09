@@ -17,3 +17,7 @@ PSInvoker supports two command line arguments. The first argument is the full pa
 > PSInvoker.exe <PATH_TO_PS1> -e RemoteSigned
 > PSInvoker.exe <PATH_TO_PS1> --ExecutionPolicy RemoteSigned
 ```
+
+## Logging
+
+PSInvoker writes to a log file placed in the %TEMP% folder called PSInvoker.log.
