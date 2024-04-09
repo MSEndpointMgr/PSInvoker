@@ -9,15 +9,25 @@ For any command line, e.g. in a scheduled task usage scenario, simply call PSInv
 
 ## Command line arguments
 
-PSInvoker supports two command line arguments. The first argument is the full path of the PowerShell script file, e.g. C:\Scripts\Script.ps1. By default, PSInvoker is set to invoke the PowerShell script file using 'Bypass' as the execution policy. This can be overridden by using the -e (--ExecutionPolicy) command line argument, and pass in any of the supported values: AllSigned, Bypass, RemoteSigned, Restricted, Unrestricted.
+PSInvoker supports two command line arguments. The first argument is the full path of the PowerShell script file, e.g. C:\Scripts\Script.ps1. By default, PSInvoker is set to invoke the PowerShell script file using 'Bypass' as the execution policy. This can be overridden by using the -e (--ExecutionPolicy) command line argument, and pass in any of the supported values: AllSigned, Bypass, RemoteSigned, Restricted, Unrestricted. If you're keen on waiting for the PowerShell process to complete executing, use the -w (--Wait) switch.
 
 ## Examples
 ```cmd
 > PSInvoker.exe <PATH_TO_PS1>
+> PSInvoker.exe <PATH_TO_PS1> -w
 > PSInvoker.exe <PATH_TO_PS1> -e RemoteSigned
 > PSInvoker.exe <PATH_TO_PS1> --ExecutionPolicy RemoteSigned
+> PSInvoker.exe <PATH_TO_PS1> --ExecutionPolicy RemoteSigned --Wait
 ```
 
 ## Logging
 
 PSInvoker writes to a log file placed in the %TEMP% folder called PSInvoker.log.
+
+## Dependencies
+
+PSInvoker requires .NET Framework 4.7.2 runtime.
+
+## PowerShell support
+
+It's currently only supported to invoke PowerShell 5.1 processes.
