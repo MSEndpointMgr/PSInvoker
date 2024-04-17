@@ -1,4 +1,5 @@
 ﻿using CommandLine;
+using System.Runtime.InteropServices;
 
 namespace PSInvoker
 {

@@ -51,7 +51,7 @@ namespace Invoker
                 // Build arguments based on command line arguments
                 string arguments = $"-NoProfile -ExecutionPolicy {executionPolicy}" + " -File \"" + filePath + "\"";
                 Logger.WriteLogFile($"Invoking process command: {processName} {arguments}");
-                
+
                 // Construct new powershell.exe process for the PowerShell script file
                 Process process = new Process();
                 process.StartInfo.FileName = processName;
